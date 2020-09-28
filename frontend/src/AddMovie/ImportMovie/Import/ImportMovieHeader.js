@@ -3,6 +3,7 @@ import React from 'react';
 import VirtualTableHeader from 'Components/Table/VirtualTableHeader';
 import VirtualTableHeaderCell from 'Components/Table/VirtualTableHeaderCell';
 import VirtualTableSelectAllHeaderCell from 'Components/Table/VirtualTableSelectAllHeaderCell';
+import translate from 'Utilities/Strings/translate';
 import styles from './ImportMovieHeader.css';
 
 function ImportMovieHeader(props) {
@@ -24,35 +25,35 @@ function ImportMovieHeader(props) {
         className={styles.folder}
         name="folder"
       >
-        Folder
-      </VirtualTableHeaderCell>
-
-      <VirtualTableHeaderCell
-        className={styles.monitor}
-        name="monitor"
-      >
-        Monitor
-      </VirtualTableHeaderCell>
-
-      <VirtualTableHeaderCell
-        className={styles.minimumAvailability}
-        name="minimumAvailability"
-      >
-        Min Availability
-      </VirtualTableHeaderCell>
-
-      <VirtualTableHeaderCell
-        className={styles.qualityProfile}
-        name="qualityProfileId"
-      >
-        Quality Profile
+        {translate('Folder')}
       </VirtualTableHeaderCell>
 
       <VirtualTableHeaderCell
         className={styles.movie}
         name="movie"
       >
-        Movie
+        {translate('Movie')}
+      </VirtualTableHeaderCell>
+
+      <VirtualTableHeaderCell
+        className={styles.monitor}
+        name="monitor"
+      >
+        {translate('Monitor')}
+      </VirtualTableHeaderCell>
+
+      <VirtualTableHeaderCell
+        className={styles.minimumAvailability}
+        name="minimumAvailability"
+      >
+        {translate('MinAvailability')}
+      </VirtualTableHeaderCell>
+
+      <VirtualTableHeaderCell
+        className={styles.qualityProfile}
+        name="qualityProfileId"
+      >
+        {translate('QualityProfile')}
       </VirtualTableHeaderCell>
     </VirtualTableHeader>
   );
